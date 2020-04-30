@@ -30,12 +30,20 @@ class TransactionsRepository {
     // TODO
 
     const IncomeSum = this.transactions.reduce((total, elemento) => {
-      if (elemento.type === 'income') return (total += elemento.value);
+      if (elemento.type === 'income') {
+        let newTotal = total;
+        newTotal += elemento.value;
+        return newTotal;
+      }
       return total;
     }, 0);
 
     const OutcomeSum = this.transactions.reduce((total, elemento) => {
-      if (elemento.type === 'outcome') return (total += elemento.value);
+      if (elemento.type === 'outcome') {
+        let newTotal = total;
+        newTotal += elemento.value;
+        return newTotal;
+      }
       return total;
     }, 0);
 

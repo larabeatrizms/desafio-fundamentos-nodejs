@@ -95,7 +95,7 @@ Para esse desafio temos os seguintes testes:
 yarn dev:server
 ```
 
-## ⛏️ Contruído utilizando <a name = "built_using"></a>
+## ⛏️ Construído utilizando <a name = "built_using"></a>
 
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 - [Typescript](https://www.typescriptlang.org/) - Language for application-scale JavaScript

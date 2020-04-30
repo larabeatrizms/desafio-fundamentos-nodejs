@@ -24,6 +24,16 @@ class CreateTransactionService {
 
   public execute({ id, title, value, type }: Request): Transaction {
     // TODO
+
+    const balance = this.transactionsRepository.getBalance();
+
+    const validBalance =
+      type === 'income' ? true : balance.income >= value + balance.outcome;
+
+    if (!validBalance) {
+      throw Error('This transaction goes beyond the companys cash');
+    }
+
     const transaction = this.transactionsRepository.create({
       id,
       title,
